@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="p-4">
+    <WebView src="{{ honeycombUrl }}" />
+    <ActivityIndicator busy="{{ isLoading }}" />
+</GridLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Frame xmlns="http://schemas.nativescript.org/tns.xsd">
+    <Page>
+        <ActionBar title="Crypto Network" />
+        <GridLayout rows="auto, *">
+            <StackLayout row="0" orientation="horizontal" horizontalAlignment="center" class="m-2">
+                <Button text="24h" tap="{{ onTimeframeChange }}" data-timeframe="24h" class="{{ timeframe === '24h' ? 'btn-primary' : 'btn-outline' }}" />
+                <Button text="7d" tap="{{ onTimeframeChange }}" data-timeframe="7d" class="{{ timeframe === '7d' ? 'btn-primary' : 'btn-outline' }}" />
+                <Button text="30d" tap="{{ onTimeframeChange }}" data-timeframe="30d" class="{{ timeframe === '30d' ? 'btn-primary' : 'btn-outline' }}" />
+            </StackLayout>
+            <GridLayout row="1">
+                <WebView src="{{ networkUrl }}" />
+                <ActivityIndicator busy="{{ isLoading }}" />
+            </GridLayout>
+        </GridLayout>
+    </Page>
+</Frame>
